@@ -19,9 +19,6 @@ enum DataTypes {
 */
 class NetworkManager {
     
-    
-    
-    
     func fetchAPIinfo<T: Decodable>(urlString: String, expectingReturnType: T.Type) {
         guard let url = URL(string: urlString) else { return }
         //let config = URLSession(configuration: .default)
