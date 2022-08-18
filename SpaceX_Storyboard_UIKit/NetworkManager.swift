@@ -26,8 +26,13 @@ class NetworkManager {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, let data = data, let response = response else { return }
             let jsonDecoder = JSONDecoder()
-            guard let usefulData = try? jsonDecoder.decode([T].self, from: data) else { return }
-            print(usefulData)
+            do {
+                let usefulData = try? jsonDecoder.decode([T].self, from: data) 
+                print(usefulData)
+            } catch {
+                print(error.localizedDescription)
+            }
+            
         }.resume()
     }
 }

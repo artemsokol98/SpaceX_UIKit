@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let networkManager = NetworkManager()
-        networkManager.fetchAPIinfo(urlString: URLs.rocketModel.rawValue, expectingReturnType: RocketModel.self)
+        // networkManager.fetchAPIinfo(urlString: URLs.rocketModel.rawValue, expectingReturnType: RocketModel.self)
         networkManager.fetchAPIinfo(urlString: URLs.rocketLaunches.rawValue, expectingReturnType: RocketLaunches.self)
     }
 
