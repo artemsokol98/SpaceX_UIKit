@@ -13,7 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyCVz8OFWmnrHmkeX5HT77LRmNhBODh0oV8")
+        var apiKey: String {
+            guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
+                  fatalError("Couldn't find file 'TMDB-Info.plist'.")
+            }
+            let plist = NSDictionary(contentsOfFile: filePath)
+            guard let value = plist?.object(forKey: "GoogleMapsAPI_KEY") as? String else {
+                  fatalError("Couldn't find key 'GoogleMapsAPI_KEY' in 'Info.plist'.")
+            }
+            return value
+        }
+        GMSServices.provideAPIKey(apiKey)
         
         NetworkManager.shared.fetchInformation(urlString: URLs.rocketModel.rawValue, expectingType: [RocketModel].self) {
             NotificationCenter.default.post(name: Notification.Name(NotificationNames.dataDownloaded), object: nil)
