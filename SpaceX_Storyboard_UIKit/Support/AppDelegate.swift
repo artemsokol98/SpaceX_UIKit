@@ -6,14 +6,31 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyCVz8OFWmnrHmkeX5HT77LRmNhBODh0oV8")
+        
+        NetworkManager.shared.fetchInformation(urlString: URLs.rocketModel.rawValue, expectingType: [RocketModel].self) {
+            NotificationCenter.default.post(name: Notification.Name(NotificationNames.dataDownloaded), object: nil)
+            MainViewController.canIFetchData = true
+            // notification center
+        }
+        NetworkManager.shared.fetchInformation(urlString: URLs.rocketLaunches.rawValue, expectingType: [RocketLaunches].self) {
+            print("Launches have loaded")
+        }
+        
+        NetworkManager.shared.fetchInformation(urlString: URLs.launchPads.rawValue, expectingType: [LaunchPadModel].self) {
+            print("LaunchPads have loaded")
+        }
+        
+        NetworkManager.shared.fetchInformation(urlString: URLs.landingPads.rawValue, expectingType: [LandingPadModel].self) {
+            print("LandingPads have loaded")
+        }
         return true
     }
 
@@ -31,6 +48,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
 }
-

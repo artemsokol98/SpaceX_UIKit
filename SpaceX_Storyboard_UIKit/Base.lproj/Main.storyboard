@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -11,27 +11,100 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpaceX_Storyboard_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initialRocketsViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SpaceX_Storyboard_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kwj-aK-NRL">
-                                <rect key="frame" x="149" y="848" width="116" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xal-VO-iwa">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ES2-3H-oCF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <connections>
+                                    <segue destination="9xb-Yx-LiD" kind="embed" id="bfh-o2-S82"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ES2-3H-oCF" secondAttribute="trailing" id="DcN-ae-f7t"/>
+                            <constraint firstItem="ES2-3H-oCF" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="QAi-u2-vSb"/>
+                            <constraint firstItem="ES2-3H-oCF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TZV-lu-ifm"/>
+                            <constraint firstItem="ES2-3H-oCF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o2x-Cd-pJs"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26.086956521739133" y="79.6875"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Sj5-2i-euv">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9xb-Yx-LiD" customClass="PageViewController" customModule="SpaceX_Storyboard_UIKit" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itZ-CJ-Nzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="80"/>
+        </scene>
+        <!--Containing View Controller-->
+        <scene sceneID="2o1-t6-ld3">
+            <objects>
+                <viewController storyboardIdentifier="containingVC" id="RqW-dY-6DJ" customClass="ContainingViewController" customModule="SpaceX_Storyboard_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="puw-wz-pIb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A8z-55-zW2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="800" id="QjI-1X-6AM"/>
+                                </constraints>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tP-Cu-42i">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="ri4-wH-qkq" kind="embed" id="hLM-8a-tjf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uzx-tU-6MF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9tP-Cu-42i" secondAttribute="bottom" id="2PO-wT-9v4"/>
+                            <constraint firstAttribute="top" secondItem="A8z-55-zW2" secondAttribute="top" id="3N1-hd-sVr"/>
+                            <constraint firstItem="9tP-Cu-42i" firstAttribute="top" secondItem="puw-wz-pIb" secondAttribute="top" id="8mp-tg-rdA"/>
+                            <constraint firstItem="uzx-tU-6MF" firstAttribute="trailing" secondItem="9tP-Cu-42i" secondAttribute="trailing" id="fi3-RU-YeT"/>
+                            <constraint firstItem="9tP-Cu-42i" firstAttribute="leading" secondItem="uzx-tU-6MF" secondAttribute="leading" id="k54-Mm-cTI"/>
+                            <constraint firstItem="uzx-tU-6MF" firstAttribute="trailing" secondItem="A8z-55-zW2" secondAttribute="trailing" id="oOn-K2-pby"/>
+                            <constraint firstItem="A8z-55-zW2" firstAttribute="leading" secondItem="uzx-tU-6MF" secondAttribute="leading" id="zwr-Sh-f6Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="9tP-Cu-42i" id="sRP-6k-mux"/>
+                        <outlet property="containerViewTop" destination="8mp-tg-rdA" id="HlB-HT-riV"/>
+                        <outlet property="headerImage" destination="A8z-55-zW2" id="3ki-J6-Cxs"/>
+                        <outlet property="headerImageHeight" destination="QjI-1X-6AM" id="6bP-hK-sX2"/>
+                        <outlet property="headerImageTop" destination="3N1-hd-sVr" id="fSa-Tz-H0s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2XU-kY-Pu8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063.768115942029" y="78.348214285714278"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Dgb-l5-VCy">
+            <objects>
+                <viewController id="ri4-wH-qkq" customClass="MainViewController" customModule="SpaceX_Storyboard_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RtO-rU-6vt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="x4L-tq-dCx"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2MB-Pz-gu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2963.768115942029" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>

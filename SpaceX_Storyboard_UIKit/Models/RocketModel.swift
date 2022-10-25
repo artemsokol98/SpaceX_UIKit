@@ -150,7 +150,3 @@ struct ISP: Decodable {
         case vacuum
     }
 }
-
-
-
-

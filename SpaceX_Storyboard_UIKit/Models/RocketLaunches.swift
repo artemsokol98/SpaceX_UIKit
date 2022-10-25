@@ -48,66 +48,6 @@ struct RocketLaunches: Decodable {
         case launchLibraryID = "launch_library_id"
         case id
     }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        print(container)
-        fairings = try container.decode(Fairings?.self, forKey: .fairings)
-        print(fairings)
-        links = try container.decode(Links?.self, forKey: .links)
-        print(links)
-        staticFireDateUTC = try container.decode(String?.self, forKey: .staticFireDateUTC)
-        print(staticFireDateUTC)
-        staticFireDateUnix = try container.decode(Int?.self, forKey: .staticFireDateUnix)
-        print(staticFireDateUnix)
-        net = try container.decode(Bool?.self, forKey: .net)
-        print(net)
-        window = try container.decode(Int?.self, forKey: .window)
-        print(window)
-        rocket = try container.decode(String?.self, forKey: .rocket)
-        print(rocket)
-        success = try container.decode(Bool?.self, forKey: .success)
-        print(success)
-        failures = try container.decode([Failure]?.self, forKey: .failures)
-        print(failures)
-        details = try container.decode(String?.self, forKey: .details)
-        print(details)
-        crew = try container.decode([String]?.self, forKey: .crew)
-        print(crew)
-        ships = try container.decode([String]?.self, forKey: .ships)
-        print(ships)
-        capsules = try container.decode([String]?.self, forKey: .capsules)
-        print(capsules)
-        payloads = try container.decode([String]?.self, forKey: .payloads)
-        print(payloads)
-        launchpad = try container.decode(String?.self, forKey: .launchpad)
-        print(launchpad)
-        flightNumber = try container.decode(Int?.self, forKey: .flightNumber)
-        print(flightNumber)
-        name = try container.decode(String?.self, forKey: .name)
-        print(name)
-        dateUTC = try container.decode(String?.self, forKey: .dateUTC)
-        print(dateUTC)
-        dateUnix = try container.decode(Int?.self, forKey: .dateUnix)
-        print(dateUnix)
-        dateLocal = try container.decode(String?.self, forKey: .dateLocal)
-        print(dateLocal)
-        datePrecision = try container.decode(String?.self, forKey: .datePrecision)
-        print(datePrecision)
-        upcoming = try container.decode(Bool?.self, forKey: .upcoming)
-        print(upcoming)
-        cores = try container.decode([Core]?.self, forKey: .cores)
-        print(cores)
-        autoUpdate = try container.decode(Bool?.self, forKey: .autoUpdate)
-        print(autoUpdate)
-        tbd = try container.decode(Bool?.self, forKey: .tbd)
-        print(tbd)
-        launchLibraryID = try container.decode(String?.self, forKey: .launchLibraryID)
-        print(launchLibraryID)
-        id = try container.decode(String?.self, forKey: .id)
-        print(id)
-        
-    }
 }
 
 // MARK: - Fairings
@@ -156,7 +96,7 @@ struct Flickr: Decodable {
     let original: [String]?
 }
 
-//MARK: - Core
+    // MARK: - Core
 struct Core: Decodable {
     let core: String?
     let flight: Int?
@@ -174,11 +114,9 @@ struct Core: Decodable {
     }
 }
 
-//MARK: - Failure
+// MARK: - Failure
 struct Failure: Decodable {
     let time: Int?
     let altitude: Int?
     let reason: String?
 }
-
-
