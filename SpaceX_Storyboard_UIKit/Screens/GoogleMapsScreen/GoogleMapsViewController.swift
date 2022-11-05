@@ -37,8 +37,8 @@ class GoogleMapsViewController: UIViewController {
         tableView.dataSource = self
         view.addSubview(googleMap)
         view.addSubview(tableView)
-            
-        launchPads = NetworkManager.shared.launchPads
+        
+        launchPads = DIContainer.shared.networkManager.launchPads
         for launchPad in launchPads {
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: launchPad.latitude, longitude: launchPad.longitude)
@@ -48,7 +48,7 @@ class GoogleMapsViewController: UIViewController {
             marker.map = googleMap
         }
         
-        landingPads = NetworkManager.shared.landingPads
+        landingPads = DIContainer.shared.networkManager.landingPads
         for landingPad in landingPads {
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: landingPad.latitude, longitude: landingPad.longitude)

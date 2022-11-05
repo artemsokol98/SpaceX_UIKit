@@ -54,7 +54,7 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell else { fatalError() }
         cell.segmentedControlValueChangedDelegate = self
-        cell.configure(infoForSegmentedControl: SettingsManager.shared.loadSetting(row: indexPath.row))
+        cell.configure(infoForSegmentedControl: DIContainer.shared.settingsManager.loadSetting(row: indexPath.row))
         cell.backgroundColor = .black
         
         return cell
@@ -68,6 +68,6 @@ extension SettingsViewController: UITableViewDataSource {
 
 extension SettingsViewController: SegmentedControlDelegate {
     func segmentedControlValueChanged(SCIndex: Int, label: String) {
-        SettingsManager.shared.setSetting(numberOfSegmentedControl: SCIndex, key: label)
+        DIContainer.shared.settingsManager.setSetting(numberOfSegmentedControl: SCIndex, key: label)
     }
 }

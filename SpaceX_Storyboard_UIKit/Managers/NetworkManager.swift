@@ -29,8 +29,6 @@ class NetworkManager: NetworkManagerProtocol {
     var rocketModel: [RocketModel] = []
     var rocketLaunches: [RocketLaunches] = []
     
-    static let shared = NetworkManager()
-    
     func fetchInformation<T: Decodable>(urlString: String, expectingType: T.Type, completion: @escaping CompletionHadler) {
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { data, _, _ in

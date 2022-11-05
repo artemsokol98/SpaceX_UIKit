@@ -157,11 +157,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension MainViewController: ShowLaunchesButtonCellDelegate {
-    func didPressButton() {
-        let vc = LaunchesViewController(launches: NetworkManager.shared.rocketLaunches, rocketId: NetworkManager.shared.rocketModel[viewModel.numberOfPage].id)
+    func didPressButton() {        
+        let vc = LaunchesViewController(launches: DIContainer.shared.networkManager.rocketLaunches, rocketId: DIContainer.shared.networkManager.rocketModel[viewModel.numberOfPage].id)
         vc.accessibilityNavigationStyle = .automatic
         show(vc, sender: self)
-        vc.navigationItem.title = NetworkManager.shared.rocketModel[viewModel.numberOfPage].name
+        vc.navigationItem.title = DIContainer.shared.networkManager.rocketModel[viewModel.numberOfPage].name
         vc.navigationItem.titleView?.tintColor = .black
     }
 }

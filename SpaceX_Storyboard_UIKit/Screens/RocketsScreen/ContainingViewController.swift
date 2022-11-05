@@ -42,7 +42,7 @@ class ContainingViewController: UIViewController {
     
     @objc func sendRequest() {
         DispatchQueue.global().async {
-            guard let url = URL(string: NetworkManager.shared.rocketModel[MainViewModel.counter].flickrImages?[0] ?? "No info") else { return }
+            guard let url = URL(string:                            DIContainer.shared.networkManager.rocketModel[MainViewModel.counter].flickrImages?[0] ?? "No info") else { return }
             guard let imageData = try? Data(contentsOf: url) else { return }
             DispatchQueue.main.async {
                 self.headerImage.image = UIImage(data: imageData)

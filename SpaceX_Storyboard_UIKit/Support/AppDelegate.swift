@@ -24,21 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return value
         }
         GMSServices.provideAPIKey(apiKey)
-        
-        NetworkManager.shared.fetchInformation(urlString: URLs.rocketModel.rawValue, expectingType: [RocketModel].self) {
+        DIContainer.shared.networkManager.fetchInformation(urlString: URLs.rocketModel.rawValue, expectingType: [RocketModel].self) {
             NotificationCenter.default.post(name: Notification.Name(NotificationNames.dataDownloaded), object: nil)
             MainViewController.canIFetchData = true
             // notification center
         }
-        NetworkManager.shared.fetchInformation(urlString: URLs.rocketLaunches.rawValue, expectingType: [RocketLaunches].self) {
+        DIContainer.shared.networkManager.fetchInformation(urlString: URLs.rocketLaunches.rawValue, expectingType: [RocketLaunches].self) {
             print("Launches have loaded")
         }
-        
-        NetworkManager.shared.fetchInformation(urlString: URLs.launchPads.rawValue, expectingType: [LaunchPadModel].self) {
+        DIContainer.shared.networkManager.fetchInformation(urlString: URLs.launchPads.rawValue, expectingType: [LaunchPadModel].self) {
             print("LaunchPads have loaded")
         }
-        
-        NetworkManager.shared.fetchInformation(urlString: URLs.landingPads.rawValue, expectingType: [LandingPadModel].self) {
+        DIContainer.shared.networkManager.fetchInformation(urlString: URLs.landingPads.rawValue, expectingType: [LandingPadModel].self) {
             print("LandingPads have loaded")
         }
         return true

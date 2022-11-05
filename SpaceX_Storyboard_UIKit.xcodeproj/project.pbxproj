@@ -25,6 +25,7 @@
 		714F58CF28A7E59600BC418D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714F58CD28A7E59600BC418D /* Main.storyboard */; };
 		714F58D128A7E59900BC418D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714F58D028A7E59900BC418D /* Assets.xcassets */; };
 		714F58D428A7E59900BC418D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714F58D228A7E59900BC418D /* LaunchScreen.storyboard */; };
+		715B0E622916457100C30832 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B0E612916457100C30832 /* DIContainer.swift */; };
 		716BEE0828F46BDA006A441C /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716BEE0728F46BDA006A441C /* GoogleMapsViewController.swift */; };
 		716BEE0A28F48C3A006A441C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716BEE0928F48C3A006A441C /* TabBarViewController.swift */; };
 		7170FB6428CB6FE200C99A23 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170FB6328CB6FE200C99A23 /* CollectionTableViewCell.swift */; };
@@ -69,6 +70,7 @@
 		714F58D028A7E59900BC418D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714F58D328A7E59900BC418D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		714F58D528A7E59900BC418D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		715B0E612916457100C30832 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		716BEE0728F46BDA006A441C /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		716BEE0928F48C3A006A441C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7170FB6328CB6FE200C99A23 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		714F58C628A7E59600BC418D /* SpaceX_Storyboard_UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				715B0E602916455200C30832 /* DI */,
 				71B3E69D28FC9B5C00E782DB /* Screens */,
 				71B3E69C28FC9B2E00E782DB /* Support */,
 				71B3E69B28FC9AEC00E782DB /* Managers */,
@@ -135,6 +138,14 @@
 				714F58D528A7E59900BC418D /* Info.plist */,
 			);
 			path = SpaceX_Storyboard_UIKit;
+			sourceTree = "<group>";
+		};
+		715B0E602916455200C30832 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				715B0E612916457100C30832 /* DIContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		7170FB6228CB6F2900C99A23 /* MainViewControllerTVCs */ = {
@@ -368,6 +379,7 @@
 				716BEE0A28F48C3A006A441C /* TabBarViewController.swift in Sources */,
 				7135FA0328DDEA23005480E1 /* LaunchesTableViewCell.swift in Sources */,
 				716BEE0828F46BDA006A441C /* GoogleMapsViewController.swift in Sources */,
+				715B0E622916457100C30832 /* DIContainer.swift in Sources */,
 				7128918F28AD2B8100073D47 /* RocketLaunches.swift in Sources */,
 				7129BF7C28FDAE9300F823A6 /* Texts.swift in Sources */,
 				718BEE2B28F56F13001CC3B8 /* GoogleMapsTableViewCell.swift in Sources */,

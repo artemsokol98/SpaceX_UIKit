@@ -58,7 +58,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TileCollectionViewCell.identifier, for: indexPath) as? TileCollectionViewCell else { fatalError() }
-        cell.configure(with: viewModels[indexPath.row], unit: SettingsManager.shared.loadSetting(row: indexPath.row))
+        cell.configure(with: viewModels[indexPath.row], unit: DIContainer.shared.settingsManager.loadSetting(row: indexPath.row))
         return cell
     }
     

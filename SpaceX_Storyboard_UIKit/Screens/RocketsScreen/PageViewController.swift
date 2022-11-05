@@ -39,7 +39,7 @@ class PageViewController: UIPageViewController {
     }
     
     func getCountOfPages() -> Int {
-        NetworkManager.shared.rocketModel.count
+        DIContainer.shared.networkManager.rocketModel.count
     }
 
 }
