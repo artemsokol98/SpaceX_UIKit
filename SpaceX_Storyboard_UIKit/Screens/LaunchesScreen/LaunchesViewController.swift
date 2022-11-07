@@ -9,7 +9,7 @@ import UIKit
 
 class LaunchesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let tableView: UITableView = {
+    private let tableView: UITableView = {
         let table = UITableView(frame: .null, style: .insetGrouped)
         table.register(LaunchesTableViewCell.self, forCellReuseIdentifier: LaunchesTableViewCell.identifier)
         table.backgroundColor = .black

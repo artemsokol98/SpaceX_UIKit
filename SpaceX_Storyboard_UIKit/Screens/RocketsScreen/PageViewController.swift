@@ -30,7 +30,6 @@ class PageViewController: UIPageViewController {
     }
     
     @objc func populateItems() {
-        
         for _ in 0..<getCountOfPages() {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let c = storyboard.instantiateViewController(withIdentifier: StoryboardIdentifiers.containingViewController) 

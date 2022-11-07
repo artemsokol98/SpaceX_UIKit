@@ -16,11 +16,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let tabOne = HomeViewController()
         let tabOneBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "star"), selectedImage: nil)
         tabOne.tabBarItem = tabOneBarItem
-        
         let tabTwo = GoogleMapsViewController()
         let tabTwoBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), selectedImage: nil)
         tabTwo.tabBarItem = tabTwoBarItem
-        
         self.viewControllers = [tabOne, tabTwo]
     }
 

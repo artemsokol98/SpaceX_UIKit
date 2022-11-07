@@ -56,7 +56,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         infoButton.translatesAutoresizingMaskIntoConstraints = false
         introLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -164,7 +163,6 @@ class HomeViewController: UIViewController {
     }
     
     @objc func openMainViewController() {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: StoryboardIdentifiers.initialRocketsViewController)
         // TODO: - remove duplicates
@@ -175,7 +173,6 @@ class HomeViewController: UIViewController {
         navCon.modalPresentationStyle = .fullScreen
         navCon.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.present(navCon, animated: true)
-        
     }
     
     @objc func closeNavVC() {

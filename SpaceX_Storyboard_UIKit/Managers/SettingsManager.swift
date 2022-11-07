@@ -8,7 +8,7 @@
 import Foundation
 
 class SettingsManager {
-    var settings = [EnumirationCurrentSettings]()
+    fileprivate var settings = [EnumirationCurrentSettings]()
     
     func loadDefaultSettings() {
         // SettingsManager.shared.
@@ -120,7 +120,7 @@ struct ReturnedCurrentSetting {
     var descriptions: [String]
 }
 
-enum EnumirationCurrentSettings {
+private enum EnumirationCurrentSettings {
     case height(Height)
     case diameter(Diameter)
     case weight(Weight)
@@ -182,7 +182,7 @@ enum EnumirationCurrentSettings {
     }
 }
 
-enum Height: Int, CaseIterable {
+private enum Height: Int, CaseIterable {
     case meter
     case feet
     
@@ -203,7 +203,7 @@ enum Height: Int, CaseIterable {
     }
 }
 
-enum Diameter: Int, CaseIterable {
+private enum Diameter: Int, CaseIterable {
     case meter
     case feet
     
@@ -225,7 +225,7 @@ enum Diameter: Int, CaseIterable {
     }
 }
 
-enum Weight: Int, CaseIterable {
+private enum Weight: Int, CaseIterable {
     case kilogramm
     case pounds
     
@@ -247,7 +247,7 @@ enum Weight: Int, CaseIterable {
     }
 }
 
-enum Payload: Int, CaseIterable {
+private enum Payload: Int, CaseIterable {
     case kilogrammm
     case pounds
     

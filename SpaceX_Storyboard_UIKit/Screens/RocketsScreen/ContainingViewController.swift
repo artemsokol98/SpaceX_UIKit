@@ -52,10 +52,8 @@ class ContainingViewController: UIViewController {
 }
 
 extension ContainingViewController: ScrollViewContainingDelegate {
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let newTopConstraintConstant = -(scrollView.contentOffset.y + maxScrollAmount / 1.2)
         headerImageTop.constant = -min(0, newTopConstraintConstant)
     }
-    
 }

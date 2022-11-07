@@ -131,11 +131,6 @@ class MainViewModel: MainViewModelProtocol {
         )
         ]
     
-    var height = ""
-    var diameter = ""
-    var mass = ""
-    var idLeo = ""
-    
     // MARK: - First secton
     
     var firstSection: [MainInfoTVCModel] = [

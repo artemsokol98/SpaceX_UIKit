@@ -117,7 +117,6 @@ class SettingsTableViewCell: UITableViewCell {
                 animated: true
             )
         }
-        
         self.rightSegmentedControl.selectedSegmentIndex = infoForSegmentedControl.currentSetting
     }
     

@@ -11,9 +11,9 @@ class LaunchesTableViewCell: UITableViewCell {
     
     static let identifier = "LaunchesTableViewCell"
 
-    let stackView = UIStackView()
+    private let stackView = UIStackView()
     
-    let mainLabel: UILabel = {
+    private let mainLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .left
@@ -21,7 +21,7 @@ class LaunchesTableViewCell: UITableViewCell {
         return label
     }()
     
-    let secondaryLabel: UILabel = {
+    private let secondaryLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
         label.textAlignment = .left
@@ -29,7 +29,7 @@ class LaunchesTableViewCell: UITableViewCell {
         return label
     }()
     
-    let rightImage = UIImageView()
+    private let rightImage = UIImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
