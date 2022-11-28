@@ -92,6 +92,7 @@
 		71BF746128C8B7DC00A82E41 /* ContainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainingViewController.swift; sourceTree = "<group>"; };
 		71BF746328C8BA5200A82E41 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71BF746528C8E0AE00A82E41 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		71EAB7482935457E00CE009D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		71EAEC0428D0C30900F00C51 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +111,7 @@
 		714F58BB28A7E59600BC418D = {
 			isa = PBXGroup;
 			children = (
+				71EAB7482935457E00CE009D /* README.md */,
 				714F58C628A7E59600BC418D /* SpaceX_Storyboard_UIKit */,
 				714F58C528A7E59600BC418D /* Products */,
 			);
