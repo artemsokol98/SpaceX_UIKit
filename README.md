@@ -28,10 +28,10 @@
     <tbody>
         <tr>
             <td>
-                <img width="300" src="Resources/MainScreen.gif">
+                <img width="350" src="Resources/MainScreen.gif">
             </td>
             <td>
-                <img width="300" src="Resources/PageController.gif">
+                <img width="350" src="Resources/PageController.gif">
             </td>
         </tr>
     </tbody>
@@ -47,10 +47,10 @@
     <tbody>
         <tr>
             <td>
-                <img width="300" src="Resources/SettingsScreen.gif">
+                <img width="350" src="Resources/SettingsScreen.gif">
             </td>
             <td>
-                <img width="300" src="Resources/LaunchesScreen.gif">
+                <img width="350" src="Resources/LaunchesScreen.gif">
             </td>
         </tr>
     </tbody>
