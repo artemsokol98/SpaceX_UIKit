@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>698982014032-aj053sn3ish7akm64u2e87rpundhgpv3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.698982014032-aj053sn3ish7akm64u2e87rpundhgpv3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0W02KnWyw1_tAEiL6WBjaFHgt2mnYkmw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>698982014032</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ArtemSokolovskiy.SpaceX-Storyboard-UIKit</string>
+	<key>PROJECT_ID</key>
+	<string>pn-spacex-rockets</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pn-spacex-rockets.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:698982014032:ios:80ba27eb6d3347d6df8555</string>
+</dict>
+</plist>

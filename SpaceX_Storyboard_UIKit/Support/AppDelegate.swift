@@ -6,13 +6,31 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseMessaging
+// import UserNotifications
 import GoogleMaps
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // MARK: - Push notifications plug-in
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        UNUserNotificationCenter.current().delegate = self
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { success, _ in
+            guard success else {
+                return
+            }
+            
+            print("Success in APNS registry")
+        }
+        application.registerForRemoteNotifications()
+        
+        // MARK: - Google maps api
         var apiKey: String {
             guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
                   fatalError("Couldn't find file 'TMDB-Info.plist'.")
@@ -39,6 +57,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("LandingPads have loaded")
         }
         return true
+    }
+    
+    // MARK: - For Push Notifications
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        messaging.token { token, _ in
+            guard let token = token else {
+                return
+            }
+            print("Token: \(token)")
+        }
     }
 
     // MARK: UISceneSession Lifecycle

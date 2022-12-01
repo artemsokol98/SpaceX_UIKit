@@ -51,6 +51,8 @@
 		71BF746228C8B7DC00A82E41 /* ContainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF746128C8B7DC00A82E41 /* ContainingViewController.swift */; };
 		71BF746428C8BA5200A82E41 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF746328C8BA5200A82E41 /* MainViewController.swift */; };
 		71BF746628C8E0AE00A82E41 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF746528C8E0AE00A82E41 /* InfoTableViewCell.swift */; };
+		71C2351E293892D500DFAF27 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 71C2351D293892D500DFAF27 /* FirebaseMessaging */; };
+		71C2352129389CCB00DFAF27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C2352029389CCB00DFAF27 /* GoogleService-Info.plist */; };
 		71EAEC0528D0C30900F00C51 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EAEC0428D0C30900F00C51 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		71BF746128C8B7DC00A82E41 /* ContainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainingViewController.swift; sourceTree = "<group>"; };
 		71BF746328C8BA5200A82E41 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71BF746528C8E0AE00A82E41 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		71C2351F2938971D00DFAF27 /* SpaceX_Storyboard_UIKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpaceX_Storyboard_UIKit.entitlements; sourceTree = "<group>"; };
+		71C2352029389CCB00DFAF27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71EAB7482935457E00CE009D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		71EAEC0428D0C30900F00C51 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C2351E293892D500DFAF27 /* FirebaseMessaging in Frameworks */,
 				710106B928F46AB600997AE5 /* GoogleMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +142,7 @@
 		714F58C628A7E59600BC418D /* SpaceX_Storyboard_UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				71C2351F2938971D00DFAF27 /* SpaceX_Storyboard_UIKit.entitlements */,
 				715B0E602916455200C30832 /* DI */,
 				71B3E69D28FC9B5C00E782DB /* Screens */,
 				71B3E69C28FC9B2E00E782DB /* Support */,
@@ -147,6 +153,7 @@
 				714F58D028A7E59900BC418D /* Assets.xcassets */,
 				714F58D228A7E59900BC418D /* LaunchScreen.storyboard */,
 				714F58D528A7E59900BC418D /* Info.plist */,
+				71C2352029389CCB00DFAF27 /* GoogleService-Info.plist */,
 			);
 			path = SpaceX_Storyboard_UIKit;
 			sourceTree = "<group>";
@@ -300,6 +307,7 @@
 			name = SpaceX_Storyboard_UIKit;
 			packageProductDependencies = (
 				710106B828F46AB600997AE5 /* GoogleMaps */,
+				71C2351D293892D500DFAF27 /* FirebaseMessaging */,
 			);
 			productName = SpaceX_Storyboard_UIKit;
 			productReference = 714F58C428A7E59600BC418D /* SpaceX_Storyboard_UIKit.app */;
@@ -331,6 +339,7 @@
 			mainGroup = 714F58BB28A7E59600BC418D;
 			packageReferences = (
 				710106B728F46AB600997AE5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */,
+				71C2351C293892D500DFAF27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 714F58C528A7E59600BC418D /* Products */;
 			projectDirPath = "";
@@ -347,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714F58D428A7E59900BC418D /* LaunchScreen.storyboard in Resources */,
+				71C2352129389CCB00DFAF27 /* GoogleService-Info.plist in Resources */,
 				714F58D128A7E59900BC418D /* Assets.xcassets in Resources */,
 				71B793A42937AE720081E3AA /* SettingsScreen.gif in Resources */,
 				714F58CF28A7E59600BC418D /* Main.storyboard in Resources */,
@@ -564,6 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpaceX_Storyboard_UIKit/SpaceX_Storyboard_UIKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = W7M89AVC54;
@@ -595,6 +606,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpaceX_Storyboard_UIKit/SpaceX_Storyboard_UIKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = W7M89AVC54;
@@ -653,6 +665,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		71C2351C293892D500DFAF27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -660,6 +680,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 710106B728F46AB600997AE5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
 			productName = GoogleMaps;
+		};
+		71C2351D293892D500DFAF27 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71C2351C293892D500DFAF27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
