@@ -21,4 +21,6 @@ struct Constants {
     static let googleMapConstant: CGFloat = 0
     
     static let googleMapZoomWhenSelectTableCell: Float = 12.0
+    
+    static let tableViewRowHeight: CGFloat = 100.0
 }

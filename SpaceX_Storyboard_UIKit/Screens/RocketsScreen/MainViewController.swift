@@ -99,7 +99,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 && indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as? CollectionTableViewCell else { fatalError() }
             cell.configure(with: viewModel.horizontalScrollViewModel)
-                return cell
+            return cell
         } else if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier, for: indexPath) as? InfoTableViewCell else { fatalError() }
             cell.configure(viewModel: viewModel.firstSection[indexPath.row - 1]) // magic number "1", because first row is horizontal scroll
@@ -148,7 +148,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        100
+        Constants.tableViewRowHeight
     }
     
     @objc func updateInfo() {
