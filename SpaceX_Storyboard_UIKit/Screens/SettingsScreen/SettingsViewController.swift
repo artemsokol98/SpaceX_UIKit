@@ -38,7 +38,6 @@ class SettingsViewController: UIViewController {
         tableView.frame = CGRect(x: 0, y: 56, width: view.bounds.width, height: view.bounds.height)
         
     }
-
 }
 
 extension SettingsViewController: UITableViewDelegate {
@@ -63,7 +62,6 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-    
 }
 
 extension SettingsViewController: SegmentedControlDelegate {

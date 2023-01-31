@@ -27,6 +27,3 @@ struct LandingPadModel: Decodable {
         case wikipedia, details, launches, id
     }
 }
-
-// MARK: - Images
-// Image from LaunchPadModel

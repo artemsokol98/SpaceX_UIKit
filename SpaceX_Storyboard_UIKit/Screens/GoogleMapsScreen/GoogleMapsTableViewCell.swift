@@ -66,5 +66,4 @@ class GoogleMapsTableViewCell: UITableViewCell {
     func configure(text: String) {
         self.label.text = text
     }
-
 }
